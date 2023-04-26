@@ -18,6 +18,7 @@ public class ConfigurationSingletonTest {
     void configurationTest() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
+        // 원래는 구체 클래스 타입으로 불러오는 것은 안 좋음. get메소드를 사용하기 위해 어쩔 수 없이 사용함.
         MemberServiceImpl memberService = ac.getBean("memberService", MemberServiceImpl.class);
         OrderServiceImpl orderService = ac.getBean("orderService", OrderServiceImpl.class);
         MemberRepository memberRepository = ac.getBean("memberRepository", MemberRepository.class);
@@ -25,6 +26,13 @@ public class ConfigurationSingletonTest {
         MemberRepository memberRepository1 = memberService.getMemberRepository();
         MemberRepository memberRepository2 = orderService.getMemberRepository();
 
+
+
+        /**
+         * 확인하기 위한 출력 -> 3개 모두 같은 것을 확인 가능!!!
+         * memberRepository는 3번 new로 호출되었으니 3개의 값 모두 다른 것이 정상 이라고 생각하기쉬움
+         * 하지만 같다... 왜..??
+         */
         System.out.println("memberService -> memberRepository = " + memberRepository1);
         System.out.println("orderService -> orderRepository = " + memberRepository2);
         System.out.println("memberRepository = " + memberRepository);
