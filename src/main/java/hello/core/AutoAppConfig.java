@@ -1,8 +1,5 @@
 package hello.core;
 
-import hello.core.member.MemberRepository;
-import hello.core.member.MemoryMemberRepository;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
@@ -25,5 +22,6 @@ public class AutoAppConfig {
 //        // Overriding bean definition for bean 'memoryMemberRepository' with a different definition
 //        // 하지만 잘 사용하지않고 오버라이딩이 된다면 실수인 경우가 대부분이다.
 //        // 중복상태로 CoreApplication 실행시 자동으로 disabled 된다 (~~ and overriding is disabled.) 기본설정
+
 //    }
 }
