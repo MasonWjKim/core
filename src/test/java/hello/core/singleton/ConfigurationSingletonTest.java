@@ -37,7 +37,7 @@ public class ConfigurationSingletonTest {
         System.out.println("orderService -> orderRepository = " + memberRepository2);
         System.out.println("memberRepository = " + memberRepository);
 
-        assertThat(memberService.getMemberRepository()).isSameAs(memberRepository);
+        assertThat(memberService.getMemberRepository()).isSameAs(memberRepository1);
         assertThat(orderService.getMemberRepository()).isSameAs(memberRepository);
 
     }

@@ -29,7 +29,7 @@ class RateDiscountPolicyTest {
     @DisplayName("VIP가 아닐때는 할인이 적용되지 않아야 한다")
     void vip_x() {
         //given
-        Member member = new Member(2L, "memberBasic", Grade.BASIC);
+        Member member = new Member(2L, "memberBasic", Grade.VIP);
 
         //when
         int discount = discountPolicy.discount(member, 10000);

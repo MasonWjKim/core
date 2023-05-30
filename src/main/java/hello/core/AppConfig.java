@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class AppConfig {
+public class  AppConfig {
     // SRP 단일 책임 원칙 - 구현 객체를 생성하고 연결하는 책임은 AppConfig가 담당, 클라이언트 객체는 실행하는 책임만 담당
     // DIP 의존관계 역전 원칙 - 추상화의존, AppConfig가 객체 인스턴스를 클라이언트 코드 대신 생성하여 의존관계 주입
     // OCP 소프트웨어 요소는 확장에는 열려있으나, 변경에는 닫혀 있어야 한다 - 소프트웨어 요소를 새롭게 확장해도 사용 영역의 변경은 닫혀있다.
