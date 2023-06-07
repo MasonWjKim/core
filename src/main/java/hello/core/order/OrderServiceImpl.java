@@ -18,6 +18,7 @@ public class OrderServiceImpl implements OrderService{
     private final MemberRepository memberRepository; // final을 쓰면 초기화단계에서 값이 들어와야하므로 컴파일에서 오류를 잡을 수 있다.
     // @Autowired private MemberRepository memberRepository;
     // 필드주입 -> 외부에서 변경 불가능, DI프레임워크없이는 아무것도 하지 못함 ...>> 사용X
+
     private final DiscountPolicy discountPolicy;
 
 
